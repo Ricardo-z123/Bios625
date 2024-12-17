@@ -12,7 +12,7 @@ Step 1: Data acquisition
 Step 2: Data pre-processing
 -   Detecting NA value and outliers using Z-score.
 -   Assign the categorical variable risk level to 0, 1, 2.
-   
+
 Step 3: Data visualization
 -   To effectively identifiy relationships within the data itself, a heatmap of all 24 features within the data is created.
 -   Draw Lowess Plot and violin plot to more intuitively discover the relationship between covariates and independent variables.
