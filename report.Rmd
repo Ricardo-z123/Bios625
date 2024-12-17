@@ -99,7 +99,7 @@ knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/RF_FI.png")
 We generate the feature importance plot for the random forest method, demonstrating the relative influence of each feature on the model's prediction outcomes.\
 From the plot, Obesity, Alochol_use and Wheezing rank top 3 influencing factors for lung cancer risk.\
 
-\Large \textbf{Comparison and Accuarcy}\
+\Large \textbf{Comparison and Accuracy}\
 ```{r, echo = FALSE,out.width='75%'}
 knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/CM_Compariosn.png")
 ```  
