@@ -27,7 +27,8 @@ Step 5: Create and train Multinomial Logistic Regression
   <img src=plots/MR_CI.png>
   
 Step 6: Create and train Random Forest
--   Random Forest is an ensemble learning method used for both classification and regression tasks. It builds multiple decision trees and combines their predictions to produce a more accurate and robust result. Each tree is trained on a different bootstrap sample of the data (sampling with replacement). At each split within a tree, a random subset of features is considered to reduce correlation among trees.
+-   Random Forest is an ensemble learning method used for both classification and regression tasks. It builds multiple decision trees and combines their predictions to produce a more accurate and robust result.
+-   Each tree is trained on a different bootstrap sample of the data (sampling with replacement). At each split within a tree, a random subset of features is considered to reduce correlation among trees.
 -   Evaluate and Visulization
   <img src=plots/RF_CI.png>
   <img src=plots/RF_FI.png>
