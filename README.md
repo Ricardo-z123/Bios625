@@ -1,6 +1,7 @@
 # Lung Cancer Prediction
 ## Introduction 
-Lung cancer is one of the leading causes of cancer-related deaths worldwide, primarily due to its late diagnosis and limited early detection methods. Early prediction and prevention of lung cancer can significantly improve patient outcomes and reduce mortality rates. Our group focus on three parts for this project. First, analyzing the association between different factors with lung cancer risk. Second, developing a predictive model for assessing lung cancer risk. Third, find the contribution of different variables to lung cancer.
+Lung cancer is one of the leading causes of cancer-related deaths worldwide, primarily due to its late diagnosis and limited early detection methods. Early prediction and prevention of lung cancer can significantly improve patient outcomes and reduce mortality rates. 
+Our group focus on three parts for this project. First, analyzing the association between different factors with lung cancer risk. Second, developing a predictive model for assessing lung cancer risk. Third, find the contribution of different variables to lung cancer.
 
 ## Dependencies
 -   Python **3.6+**
@@ -22,7 +23,8 @@ Step 4: Prepare for machine learning
 -   Discovered that the output numbers of three levels are close to each other. Level (0,1,2) corresponding to (258,221,221) total 700, which means the training set is balanced.
 
 Step 5: Create and train Multinomial Logistic Regression
--   Multinomial Logistic Regression is a statistical classification technique used to predict categorical dependent variables with more than two possible outcomes. It is an extension of logistic regression, which is typically used for binary classification problems.
+-   Multinomial Logistic Regression is a statistical classification technique used to predict categorical dependent variables with more than two possible outcomes.
+-   It is an extension of logistic regression, which is typically used for binary classification problems.
 -   Evaluate and Visulization
   <img src=plots/MR_CI.png>
   
