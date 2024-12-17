@@ -48,7 +48,7 @@ Step 7: Create and train Gaussian Naive Bayes
   
 Step 8: Comparison and Accuarcy
 -   Comparison of Confusion Matrix
-  <img src=plots/Score_Compariosn.png>
+  <img src=plots/CM_Compariosn.png>
 
 -   Score Comparison
   <img src=plots/Score_Compariosn.png>
