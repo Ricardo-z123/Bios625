@@ -17,17 +17,17 @@ Lung cancer is one of the leading causes of cancer-related deaths worldwide, pri
 Our group focus on three parts for this project. First, analyzing the association between different factors with lung cancer risk. Second, developing a predictive model for assessing lung cancer risk. Third, find the contribution of different variables to lung cancer.\
 
 \large \textbf{Dataset}\
-Our study population was generated from patients with lung cancer, which included 1000 observations for 24 variables(Kaggle.com). By detecting NA value and outliers using Z-score, we still have 1000 observations because the data set has already cleaned when download. We set Lung Cancer Level as the dependent variable, other 23 variables become covariates.\
+Our study population was generated from patients with lung cancer, which included 1000 observations for 24 variables(Kaggle.com). By detecting NA value and outliers using Z-score, we still have 1000 observations because the data set has already cleaned when download. 
+We set Lung Cancer Level as the dependent variable, other 23 variables become covariates.\
 
 \Large \textbf{Method}\
 \large
-We first draw the correlation plot of those 24 variables, then we draw Lowess Plot and violin plot to more intuitively discover the relationship between covariates and independent variables.\
+We first draw the correlation plot of those 24 variables, then we draw Lowess Plot and violin plot to discover the relationship more intuitively between covariates and independent variables.\
 
 \large \textbf{Machine Learning}\
 First, we need to prepare for machine learning. We divide the data set into two parts, 70% for training and 30% for testing. 
 We discovered that the output numbers of three levels are close to each other. Level (0,1,2) corresponding to (258,221,221) total 700, which means the training set is balanced.\
-  
-  
+
 \large \textbf{Multinomial Logistic Regression(McCullagh)}\
 Multinomial Logistic Regression is a statistical classification technique used to predict categorical dependent variables with more than two possible outcomes. It is an extension of logistic regression, which is typically used for binary classification problems. In multinomial logistic regression, when the dependent variable has k classes (k > 2), the model predicts the probabilities of each class relative to a reference category.  
 ```{r, echo = FALSE}
