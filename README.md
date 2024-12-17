@@ -47,12 +47,12 @@ Step 7: Create and train Gaussian Naive Bayes
   <img src=plots/GNB_CI.png>
   
 Step 8: Comparison and Accuarcy
--   Comparison of Confusion Matrix: 
-        Each matrix shows the number of correctly and incorrectly classified instances for the three classes: Low, Medium, and High. Logistic Regression and Random Forest 
-        show perfect classification. Naive Bayes has some mistakes.
+-   Comparison of Confusion Matrix:
+    -    Each matrix shows the number of correctly and incorrectly classified instances for the three classes: Low, Medium, and High. Logistic Regression and Random Forest 
+         show perfect classification. Naive Bayes has some mistakes.
     
 -   Score Comparison: 
-        bar plot shows the score comparison of three different machine learning methods. The scores represent the accuracy of the predictions.
-        Accuracy is a helpful metric when dealing with balanced classes and care about the overall model “correctness” and is easy to explain and communicate. 
+    -    bar plot shows the score comparison of three different machine learning methods. The scores represent the accuracy of the predictions.
+         Accuracy is a helpful metric when dealing with balanced classes and care about the overall model “correctness” and is easy to explain and communicate. 
 
   
