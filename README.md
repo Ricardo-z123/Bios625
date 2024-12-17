@@ -15,12 +15,11 @@ Step 2: Data pre-processing
 
 Step 3: Data visualization
 -   To effectively identifiy relationships within the data itself, a heatmap of all 24 features within the data is created.
--   Draw Lowess Plot and violin plot to more intuitively discover the relationship between covariates and independent variables.
+-   Draw Lowess Plot and violin plot to discover the relationship more intuitively between covariates and independent variables.
 
 Step 4: Prepare for machine learning
 -   Divide the data set into two parts, 70% for training and 30% for testing, and set random state to 40.
--   Discovered that the output numbers of three levels are close to each other. Level (0,1,2) corresponding to (258,221,221) total 700, which means the
-    training set is balanced.
+-   Discovered that the output numbers of three levels are close to each other. Level (0,1,2) corresponding to (258,221,221) total 700, which means the training set is balanced.
 
 Step 5: Create and train Multinomial Logistic Regression
 -   Multinomial Logistic Regression is a statistical classification technique used to predict
