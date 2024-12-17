@@ -54,8 +54,8 @@ knitr::include_graphics("C:/Users/zyq11/Desktop/GNB.png")
 \
 
 \large \textbf{Method Summary}\
-For these three classification method, we each draw classification report plot, confidence interval plot and confusion matrices plots. Further more, we also have coefficient contribution plots for Multinomial Logistic Regression, feature importance plot for Random Forest. We final have a compare bar plot for the accuracy of three methods. From classificatin report plot and confusion matrices plots, we find the predict precision for the three classification method. From confidence interval plot, we obtained the confidence levels of prediction by each of the three classification methods. From coefficient contribution and feature importance plot, We identified the covariates most likely to influence lung cancer levels.
-
+For these three classification methods, we each draw classification report plots, confidence interval plots and confusion matrices plots. Furthermore, we also have coefficient contribution plots for Multinomial Logistic Regression, and feature importance plots for Random Forest. We finally have a compare bar plot for the accuracy of these three methods.
+From the classification report plot and confusion matrices plots, we find the predicted precision for the three classification methods. From the confidence interval plot, we obtained the confidence levels of prediction by each of the three classification methods. From the coefficient contribution and feature importance plot, We identified the covariates were most likely to influence lung cancer levels.
 
 \Large \textbf{Result}\
 \large
