@@ -27,7 +27,7 @@ Step 5: Create and train Multinomial Logistic Regression
     categorical dependent variables with more than two possible outcomes. It is an extension of
     logistic regression, which is typically used for binary classification problems.
 -   Evaluate and Visulization
-  <img src="C:/Users/zyq11/Desktop/Bios 625/MR_CI.png">
+  <img src=["C:/Users/zyq11/Desktop/Bios 625/MR_CI.png"](https://github.com/Ricardo-z123/Bios625/blob/main/plots/MR_CI.png)>
   
 
 
