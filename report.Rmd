@@ -1,0 +1,128 @@
+---
+title: "Report for Environmental and Lifestyle Factors in Lung Cancer Risk"
+author: "Jinyan Zha, Yiqiao Zhu, Yifan Wang, Ruiqi Zhang"
+date: "2024-12-16"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+\Large \textbf{Introduction}\
+\large
+Lung cancer is one of the leading causes of cancer-related deaths worldwide, primarily due to its late diagnosis and limited early detection methods. Early prediction and prevention of lung cancer can significantly improve patient outcomes and reduce mortality rates.
+Our group focus on three parts for this project. First, analyzing the association between different factors with lung cancer risk. Second, developing a predictive model for assessing lung cancer risk. Third, find the contribution of different variables to lung cancer.\
+
+\large \textbf{Dataset}\
+Our study population was generated from patients with lung cancer, which included 1000 observations for 24 variables(Kaggle.com). By detecting NA value and outliers using Z-score, we still have 1000 observations because the data set has already cleaned when download. We set Lung Cancer Level as the dependent variable, other 23 variables become covariates.\
+
+\Large \textbf{Method}\
+\large
+We first draw the correlation plot of those 24 variables, then we draw Lowess Plot and violin plot to more intuitively discover the relationship between covariates and independent variables.\
+
+\large \textbf{Machine Learning}\
+First, we need to prepare for machine learning. We divide the data set into two parts, 70% for training and 30% for testing. 
+We discovered that the output numbers of three levels are close to each other. Level (0,1,2) corresponding to (258,221,221) total 700, which means the training set is balanced.\
+  
+  
+\large \textbf{Multinomial Logistic Regression(McCullagh)}\
+Multinomial Logistic Regression is a statistical classification technique used to predict categorical dependent variables with more than two possible outcomes. It is an extension of logistic regression, which is typically used for binary classification problems. In multinomial logistic regression, when the dependent variable has k classes (k > 2), the model predicts the probabilities of each class relative to a reference category.  
+```{r, echo = FALSE}
+knitr::include_graphics("C:/Users/zyq11/Desktop/MR.png")
+```
+\
+\large \textbf{Random Forest(Breiman)}\
+Random Forest is an ensemble learning method used for both classification and regression tasks. It builds multiple decision trees and combines their predictions to produce a more accurate and robust result. Each tree is trained on a different bootstrap sample of the data (sampling with replacement). At each split within a tree, a random subset of features is considered to reduce correlation among trees. The model is composed by two parts, first is Classification(Majority voting from all decision trees), second is Regression(Average of predictions from all trees)  
+```{r, echo = FALSE}
+knitr::include_graphics("C:/Users/zyq11/Desktop/RF.png")
+```
+\
+\large \textbf{Gaussian Naive Bayes(Rish)}\
+Gaussian Naive Bayes (GNB) is a variant of the Naive Bayes algorithm specifically used when the predictor variables (features) are continuous and assumed to follow a Gaussian distribution.Naive Bayes is a probabilistic classifier based on Bayes' Theorem, and it assumes two assumptions. First,conditional independence (The features are independent of each other given the class label). Second, Gaussian distribution(Each feature, given the class, follows a normal distribution).
+```{r, echo = FALSE}
+knitr::include_graphics("C:/Users/zyq11/Desktop/GNB.png")
+```
+\
+\large \textbf{Method Summary}\
+For these three classification method, we each draw classification report plot, confidence interval plot and confusion matrices plots. Further more, we also have coefficient contribution plots for Multinomial Logistic Regression, feature importance plot for Random Forest. We final have a compare bar plot for the accuracy of three methods. From classificatin report plot and confusion matrices plots, we find the predict precision for the three classification method. From confidence interval plot, we obtained the confidence levels of prediction by each of the three classification methods. From coefficient contribution and feature importance plot, We identified the covariates most likely to influence lung cancer levels.
+
+
+\Large \textbf{Result}\
+\large
+\Large \textbf{Gaussian Naive Bayes}\
+```{r, echo = FALSE,out.width='75%'}
+knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/GNB_report.png")  
+```
+\large
+From this classification report, weighted avg = 0.91 indicates that among all categories, the model correctly predicted 91%.\
+For class0: The precision = 1.00 and F1 score = 0.98 are both very high, almost perfectly identifying all class 0 samples.\
+For class1: The precision = 0.91 and F1 score = 0.87 are high, but the recall =0.83 is slightly low, indicating that the model misses slightly when predicting class 1.\
+For class2: The precision = 0.85 and F1 score = 0.90 are both very high, almost perfectly identifying all class 0 samples.\
+
+\Large \textbf{Multinomial Logistic Regression}\
+```{r, echo = FALSE,out.width='75%'}
+knitr::include_graphics("C:/Users/zyq11/Desktop/MR-FI.png")
+```
+\large
+This three charts display the influence of each feature on the classification outcomes in a logistic regression model, measured by the magnitude of each feature 's coefficients. \
+Obesity and passive_smoker have the greatest impact on class 0, which is low lung cancer risk, which means they increase the probability of lung cancer.\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\Large \textbf{Random Forest}\
+```{r, echo = FALSE,out.width='75%'}
+knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/RF_FI.png")
+```
+\large
+We generate the feature importance plot for the random forest method, demonstrating the relative influence of each feature on the model's prediction outcomes.\
+From the plot,Obesity, Alochol_use and Wheezing rank top 3 influencing factors for lung cancer risk
+
+\Large \textbf{Comparison and Accuarcy}\
+```{r, echo = FALSE,out.width='75%'}
+knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/CM_Compariosn.png")
+```  
+\large
+Confusion matrix shows the number of correctly and incorrectly classified instances for the three classes:Low, Medium, High.\
+Logistic Regression and Random Forest show perfect classification. Naive Bayes has some mistakes. 
+
+```{r, echo = FALSE,out.width='75%'}
+knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/Score_Compariosn.png")
+```  
+\large
+This bar plot shows the score comparison of three different machine learning methods. The scores represent the accuracy of the predictions.\
+Although the Naive Bayes method scores slightly lower.All three methods give very good results.
+
+\Large \textbf{Conclusion}\
+\large
+Based on our model results and visualizations, we found that obesity, Diet, wheezing, and alcohol use are more likely to influence the severity of lung cancer. \
+Among the models we used, both the Multinomial Logistic Regression and the Random Forest models provided predictions that were more aligned with real-world observations, demonstrating their effectiveness in capturing the underlying patterns in our data. 
+
+\Large \textbf{Reference}\
+\large
+McCullagh, Peter, and John A. Nelder. "Multinomial Logistic Models." Generalized Linear Models. Springer, 1989, pp. 151–155.
+
+Breiman, Leo. "Random Forests." Machine Learning, vol. 45, no. 1, 2001, pp. 5–32. DOI:10.1023/A:1010933404324.
+
+Rish, Irina. "An Empirical Study of the Naive Bayes Classifier." IJCAI 2001 Workshop on Empirical Methods in Artificial Intelligence, 2001, pp. 41–46.
+
+\Large \textbf{Dataset}\
+\large
+https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link
+
+\Large \textbf{Github link}\
+\large
+https://github.com/Ricardo-z123/Bios625
