@@ -39,7 +39,7 @@ Step 6: Create and train Random Forest
   <img src=plots/RF_CI.png>
   <img src=plots/RF_FI.png>
 
-Step 6: Create and train
+Step 6: Create and train Gaussian Naive Bayes
 
 
 
