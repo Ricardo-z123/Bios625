@@ -52,7 +52,7 @@ Step 8: Comparison and Accuarcy
          show perfect classification. Naive Bayes has some mistakes.
     
 -   Score Comparison: 
-    -    bar plot shows the score comparison of three different machine learning methods. The scores represent the accuracy of the predictions.
+    -    Bar plot shows the score comparison of three different machine learning methods. The scores represent the accuracy of the predictions.
          Accuracy is a helpful metric when dealing with balanced classes and care about the overall model “correctness” and is easy to explain and communicate. 
 
   
