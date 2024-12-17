@@ -29,23 +29,30 @@ First, we need to prepare for machine learning. We divide the data set into two 
 We discovered that the output numbers of three levels are close to each other. Level (0,1,2) corresponding to (258,221,221) total 700, which means the training set is balanced.\
 
 \large \textbf{Multinomial Logistic Regression(McCullagh)}\
-Multinomial Logistic Regression is a statistical classification technique used to predict categorical dependent variables with more than two possible outcomes. It is an extension of logistic regression, which is typically used for binary classification problems. In multinomial logistic regression, when the dependent variable has k classes (k > 2), the model predicts the probabilities of each class relative to a reference category.  
+Multinomial Logistic Regression is a statistical classification technique used to predict categorical dependent variables with more than two possible outcomes. It is an extension of logistic regression, which is typically used for binary classification problems. 
+In multinomial logistic regression, when the dependent variable has k classes (k > 2), the model predicts the probabilities of each class relative to a reference category.
 ```{r, echo = FALSE}
 knitr::include_graphics("C:/Users/zyq11/Desktop/MR.png")
 ```
 \
+
 \large \textbf{Random Forest(Breiman)}\
-Random Forest is an ensemble learning method used for both classification and regression tasks. It builds multiple decision trees and combines their predictions to produce a more accurate and robust result. Each tree is trained on a different bootstrap sample of the data (sampling with replacement). At each split within a tree, a random subset of features is considered to reduce correlation among trees. The model is composed by two parts, first is Classification(Majority voting from all decision trees), second is Regression(Average of predictions from all trees)  
+Random Forest is an ensemble learning method used for both classification and regression tasks. It builds multiple decision trees and combines their predictions to produce a more accurate and robust result. 
+Each tree is trained on a different bootstrap sample of the data (sampling with replacement). At each split within a tree, a random subset of features is considered to reduce correlation among trees. 
+The model is composed by two parts, first is Classification (Majority voting from all decision trees), second is Regression (Average of predictions from all trees).
 ```{r, echo = FALSE}
 knitr::include_graphics("C:/Users/zyq11/Desktop/RF.png")
 ```
 \
+
 \large \textbf{Gaussian Naive Bayes(Rish)}\
-Gaussian Naive Bayes (GNB) is a variant of the Naive Bayes algorithm specifically used when the predictor variables (features) are continuous and assumed to follow a Gaussian distribution.Naive Bayes is a probabilistic classifier based on Bayes' Theorem, and it assumes two assumptions. First,conditional independence (The features are independent of each other given the class label). Second, Gaussian distribution(Each feature, given the class, follows a normal distribution).
+Gaussian Naive Bayes (GNB) is a variant of the Naive Bayes algorithm specifically used when the predictor variables (features) are continuous and assumed to follow a Gaussian distribution. Naive Bayes is a probabilistic classifier based on Bayes' Theorem, and it assumes two assumptions.
+First, conditional independence (The features are independent of each other given the class label). Second, Gaussian distribution (Each feature, given the class, follows a normal distribution).
 ```{r, echo = FALSE}
 knitr::include_graphics("C:/Users/zyq11/Desktop/GNB.png")
 ```
 \
+
 \large \textbf{Method Summary}\
 For these three classification method, we each draw classification report plot, confidence interval plot and confusion matrices plots. Further more, we also have coefficient contribution plots for Multinomial Logistic Regression, feature importance plot for Random Forest. We final have a compare bar plot for the accuracy of three methods. From classificatin report plot and confusion matrices plots, we find the predict precision for the three classification method. From confidence interval plot, we obtained the confidence levels of prediction by each of the three classification methods. From coefficient contribution and feature importance plot, We identified the covariates most likely to influence lung cancer levels.
 
