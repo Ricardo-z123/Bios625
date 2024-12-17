@@ -104,20 +104,20 @@ From the plot, Obesity, Alochol_use and Wheezing rank top 3 influencing factors 
 knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/CM_Compariosn.png")
 ```  
 \large
-Confusion matrix shows the number of correctly and incorrectly classified instances for the three classes:Low, Medium, High.\
-Logistic Regression and Random Forest show perfect classification. Naive Bayes has some mistakes. 
+Confusion matrix shows the number of correctly and incorrectly classified instances for the three classes: Low, Medium, High.\
+Logistic Regression and Random Forest show perfect classification. Naive Bayes has some mistakes.\
 
 ```{r, echo = FALSE,out.width='75%'}
 knitr::include_graphics("C:/Users/zyq11/Desktop/Bios 625/Plots/Score_Compariosn.png")
 ```  
 \large
 This bar plot shows the score comparison of three different machine learning methods. The scores represent the accuracy of the predictions.\
-Although the Naive Bayes method scores slightly lower.All three methods give very good results.
+Although the Naive Bayes method scores slightly lower. All three methods give very good results.\
 
 \Large \textbf{Conclusion}\
 \large
-Based on our model results and visualizations, we found that obesity, Diet, wheezing, and alcohol use are more likely to influence the severity of lung cancer. \
-Among the models we used, both the Multinomial Logistic Regression and the Random Forest models provided predictions that were more aligned with real-world observations, demonstrating their effectiveness in capturing the underlying patterns in our data. 
+Based on our model results and visualizations, we found that Obesity, Diet, Wheezing, and Alcohol_use were more likely to influence the severity of lung cancer.\
+Among the models we used, both the Multinomial Logistic Regression and the Random Forest models provided predictions that were more aligned with real-world observations, demonstrating their effectiveness in capturing the underlying patterns in our data.\
 
 \Large \textbf{Reference}\
 \large
