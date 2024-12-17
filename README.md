@@ -40,6 +40,9 @@ Step 6: Create and train Random Forest
   <img src=plots/RF_FI.png>
 
 Step 6: Create and train Gaussian Naive Bayes
+-   Gaussian Naive Bayes (GNB) is a variant of the Naive Bayes algorithm specifically used when the predictor variables (features) are continuous and assumed to follow a Gaussian distribution.It 
+    assumes two assumptions. First,conditional independence (The features are independent of each other given the class label). Second, Gaussian distribution(Each feature, given the class, follows a 
+    normal distribution).
 
 
 
