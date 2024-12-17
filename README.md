@@ -34,19 +34,18 @@ Step 6: Create and train Random Forest
   <img src=plots/RF_FI.png>
 
 Step 7: Create and train Gaussian Naive Bayes
--   Gaussian Naive Bayes (GNB) is a variant of the Naive Bayes algorithm specifically used when the predictor variables (features) are continuous and assumed to follow a Gaussian distribution.It 
-    assumes two assumptions. First,conditional independence (The features are independent of each other given the class label). Second, Gaussian distribution(Each feature, given the class, follows a 
-    normal distribution).
+-   Gaussian Naive Bayes (GNB) is a variant of the Naive Bayes algorithm specifically used when the predictor variables (features) are continuous and assumed to follow a Gaussian distribution.
+-   It assumes two assumptions. First, conditional independence (The features are independent of each other given the class label). Second, Gaussian distribution (Each feature, given the class, follows a normal distribution).
 -   Evaluate and Visulization
   <img src=plots/GNB_CI.png>
   
 Step 8: Comparison and Accuarcy
 -   Comparison of Confusion Matrix:
-    -    Each matrix shows the number of correctly and incorrectly classified instances for the three classes: Low, Medium, and High. Logistic Regression and Random Forest 
-         show perfect classification. Naive Bayes has some mistakes.
+    -    Each matrix shows the number of correctly and incorrectly classified instances for the three classes: Low, Medium, and High. 
+    -    Logistic Regression and Random Forest show perfect classification. Naive Bayes has some mistakes.
     
 -   Score Comparison: 
     -    Bar plot shows the score comparison of three different machine learning methods. The scores represent the accuracy of the predictions.
-         Accuracy is a helpful metric when dealing with balanced classes and care about the overall model “correctness” and is easy to explain and communicate. 
+    -    Accuracy is a helpful metric when dealing with balanced classes and care about the overall model “correctness” and is easy to explain and communicate. 
 
   
